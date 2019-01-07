@@ -1,10 +1,17 @@
 package xmltomap
 
-import "encoding/xml"
+import (
+	"encoding/xml"
+	"io"
+)
 
-func UnmarshalXMLToMap(xmlData []byte) (map[string]string, error) {
+func Unmarshal(xmlData []byte) (map[string]string, error) {
 	u := AccessesMap{}
 	err := xml.Unmarshal(xmlData, &u)
+	if err == io.EOF {
+		err = nil
+	}
+
 	return u.M, err
 }
 
