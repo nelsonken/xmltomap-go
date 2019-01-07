@@ -1,4 +1,4 @@
-# xml unmarsahl to map for golang
+# xml unmarshal to map for golang
 
 >It's a Demo project, edit your __UnmarshalXML__ method to change behaviour
 
