@@ -18,7 +18,7 @@ func main() {
 <c>xxxx</c>
 <c>rrr</c>
 <xml>`)
-    strmap, err := xmltomap.Unmarshal(data)
+    strmap, err := xmltomap.UnmarshalXMLToMap(data)
     if err != nil {
         panic(err)
     }
